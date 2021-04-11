@@ -1,0 +1,195 @@
+.DarkBox {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PostModal {
+  position: absolute;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.PostModal > i {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.PostModal > h1 {
+  margin-top: 1rem;
+  font-family: 'Carter One', cursive;
+  text-align: center;
+  padding: 2rem 0;
+  width: 100%;
+  color: #2196f3;
+  font-size: 1.6rem;
+  border-bottom: 1px solid silver;
+}
+
+.FormGroupsWrapper {
+  position: absolute;
+  bottom: 7rem;
+  width: 100%;
+  padding: 0 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+
+.ImageWrapper {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.ImageWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.ImageWrapper > i {
+  position: absolute;
+  font-size: 2rem;
+  top: 3%;
+  left: 1.5%;
+  margin: auto;
+  color: #2196f3;
+  z-index: 1;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.ImageWrapper > i:hover {
+  color: #cb3066;
+}
+
+.Image {
+  position: relative;
+  width: 100%;
+  display: block;
+  border-radius: 0.5rem;
+  object-fit: contain;
+}
+
+.Hide {
+  display: none;
+}
+
+.FileInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #d1d5da;
+  transition-duration: 200ms;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.FileInput:hover {
+  background-color: #c5c8cf;
+}
+
+.FileInput > span {
+  position: absolute;
+  color: #6a737d;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition-duration: 200ms;
+}
+
+.FileInput:hover > span {
+  color: black;
+}
+
+.FileInput > input {
+  visibility: hidden;
+  height: 10rem;
+  width: 100%;
+  outline: none;
+  margin: 1rem 0;
+}
+
+.FileInput > label {
+  visibility: hidden;
+}
+
+.Confirm {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  background-color: #cb3066;
+  height: 5rem;
+  margin: 0.5rem;
+  border: 2px solid black;
+  color: white;
+  font-size: 1.2rem;
+  transition-duration: 200ms;
+  outline: none;
+}
+
+.Confirm:hover {
+  background-color: #ce205d;
+}
+
+.Confirm:disabled {
+  color: silver;
+  background-color: #9b1e49;
+}
+
+.Confirm:focus {
+  outline: none;
+}
+
+@media (min-width: 500px) {
+  .PostModal {
+    width: 480px;
+    height: 600px;
+    top: 6rem;
+    border-radius: 0.5rem;
+  }
+  .FormGroupsWrapper {
+    bottom: 6rem;
+  }
+  .ImageWrapper {
+    height: 272px;
+  }
+  .FileInput > input {
+    height: 240px;
+  }
+  .Confirm {
+    width: 96%;
+  }
+}
+
+@media (min-width: 900px) {
+  .PostModal {
+    top: 10rem;
+    width: 600px;
+  }
+  .FormGroupsWrapper {
+    bottom: 6rem;
+  }
+  .Confirm {
+    width: 97%;
+  }
+}

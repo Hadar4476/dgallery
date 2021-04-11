@@ -1,0 +1,64 @@
+.MyGallery {
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.SilverBGColor {
+  background-color: #e0e0e0;
+}
+
+.Header {
+  color: #cb3066;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  font-family: 'Carter One', cursive;
+  overflow-wrap: break-word;
+}
+
+.Body {
+  padding: 0.5rem;
+  width: 100%;
+  height: 890px;
+  border-radius: 0.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.Body::-webkit-scrollbar {
+  display: none;
+}
+
+.MyGalleryItemsWrapper {
+  position: relative;
+  margin-top: 2rem;
+  min-height: 900px;
+}
+
+.Error {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.PostArt {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  color: transparent;
+  border-radius: 100%;
+  cursor: pointer;
+  transition-duration: 200ms;
+  margin: 0 auto;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.PostArt:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.IconBlackColor {
+  color: #2f363d;
+}

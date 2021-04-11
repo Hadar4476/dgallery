@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+/* font-family: 'Carter One', cursive; */
+/* background: linear-gradient(#24292e, black); */
+
+/* MAIN COLORS */
+/* #e96443 */
+/* #904e95 */
+/* #2196f3 */
+/* #cb3066 */
+/* #24292e */
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(#16bffd, #cb3066);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition-duration: 200ms;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+main {
+  min-height: 900px;
+}

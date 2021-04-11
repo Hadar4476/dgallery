@@ -1,0 +1,101 @@
+.Input {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  display: flex;
+}
+
+.Input > input {
+  width: 90%;
+  border: none;
+  height: 40px;
+  font-size: 1.2rem;
+  outline: none;
+}
+.Input > input::selection {
+  color: white;
+  background-color: #cb3066;
+}
+
+.Icon {
+  position: absolute;
+  right: 2%;
+  align-self: center;
+  font-size: 1.8rem;
+}
+
+.Label {
+  font-weight: bold;
+  color: #adadad;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  transition-duration: 200ms;
+}
+
+.InputBorderBottom {
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  left: 0;
+  top: 99%;
+  background: #cb3066;
+  transition-duration: 200ms;
+}
+
+.Input > input:focus ~ .Label {
+  top: -10px;
+  color: #cb3066;
+}
+
+.Input > input:focus ~ .InputBorderBottom {
+  width: 100%;
+}
+
+.FileInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #d1d5da;
+  transition-duration: 200ms;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.FileInput:hover {
+  background-color: #c5c8cf;
+}
+
+.FileInput > span {
+  position: absolute;
+  color: #6a737d;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition-duration: 200ms;
+}
+
+.FileInput:hover > span {
+  color: black;
+}
+
+.FileInput > input {
+  visibility: hidden;
+  height: 10rem;
+  width: 100%;
+  outline: none;
+  margin: 1rem 0;
+}
+
+.FileInput > label {
+  visibility: hidden;
+}
+
+@media (min-width: 500px) {
+  .FileInput > input {
+    height: 240px;
+  }
+}

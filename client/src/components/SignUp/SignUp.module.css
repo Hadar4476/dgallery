@@ -1,0 +1,107 @@
+.DarkBox {
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SignUp {
+  position: absolute;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.SignUp > i {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.SignUp > h1 {
+  margin-top: 1rem;
+  font-family: 'Carter One', cursive;
+  text-align: center;
+  padding: 2rem 0;
+  width: 100%;
+  color: #2196f3;
+  font-size: 1.6rem;
+  border-bottom: 1px solid silver;
+}
+
+.FormGroupsWrapper {
+  position: absolute;
+  bottom: 10rem;
+  width: 100%;
+  padding: 0 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+
+.Confirm {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  background-color: #cb3066;
+  height: 5rem;
+  margin: 0.5rem;
+  border: 2px solid black;
+  color: white;
+  font-size: 1.2rem;
+  transition-duration: 200ms;
+  outline: none;
+}
+
+.Confirm:hover {
+  background-color: #ce205d;
+}
+
+.Confirm:disabled {
+  color: silver;
+  background-color: #9b1e49;
+}
+
+.Confirm:focus {
+  outline: none;
+}
+
+@media (min-width: 500px) {
+  .SignUp {
+    width: 480px;
+    height: 550px;
+    top: 12rem;
+    border-radius: 0.5rem;
+  }
+  .FormGroupsWrapper {
+    bottom: 7rem;
+  }
+  .Confirm {
+    width: 96%;
+  }
+}
+
+@media (min-width: 900px) {
+  .SignUp {
+    width: 600px;
+  }
+  .Confirm {
+    width: 97%;
+  }
+}

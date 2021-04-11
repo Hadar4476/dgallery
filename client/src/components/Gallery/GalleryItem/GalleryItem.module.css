@@ -1,0 +1,153 @@
+.WhiteBox {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition-duration: 200ms;
+}
+
+.Hidden {
+  display: none;
+}
+
+.WhiteBox > button {
+  height: 4rem;
+  width: 60%;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  color: #e0e0e0;
+  background-color: #2f363d;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition-duration: 200ms;
+}
+
+.WhiteBox > button:hover {
+  color: white;
+  background-color: #24292e;
+}
+
+.GalleryItem {
+  width: 100%;
+  background-color: white;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+  transition-duration: 200ms;
+}
+
+.GalleryItem:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.5),
+    0 4px 4px rgba(0, 0, 0, 0.5), 0 8px 2px rgba(0, 0, 0, 0.5);
+}
+
+.GalleryItem *::selection {
+  color: white;
+  background-color: #cb3066;
+}
+
+.Top {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.Top > h5 {
+  margin: 0.25rem 0.5rem;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.UserIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 100%;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+
+.Image {
+  position: relative;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  width: 100%;
+  padding: 0.25rem 0;
+  transition-duration: 200ms;
+}
+
+.Image > img {
+  width: 100%;
+  object-fit: contain;
+  background-color: #191d20;
+}
+
+.Bottom {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Bottom > p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 80%;
+  margin: auto 0;
+}
+
+.MoreIcon {
+  border-radius: 100%;
+  transition-duration: 200ms;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.MoreIcon:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.MoreIcon > i {
+  font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+  .GalleryItem {
+    border-radius: 0.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .Box {
+    padding: 0.5rem;
+  }
+  .GalleryItem {
+    width: 350px;
+    margin: 0.5rem auto;
+  }
+  .Image > img {
+    height: 350px;
+  }
+}

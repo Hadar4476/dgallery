@@ -1,0 +1,61 @@
+.SuggestionsWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.Suggestions {
+  position: absolute;
+  top: -8px;
+  width: 95%;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-left: 1px solid silver;
+  border-right: 1px solid silver;
+  border-bottom: 1px solid silver;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.SuggestionItem {
+  background-color: white;
+  border-top: 1px solid silver;
+  width: 100%;
+  transition-duration: 200ms;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.SuggestionItem:hover {
+  background-color: #dedede;
+}
+.SuggestionItem > p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+@media (min-width: 500px) {
+  .SuggestionsWrapper {
+    width: 480px;
+  }
+  .Suggestions {
+    top: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .Suggestions {
+    width: 600px;
+  }
+}

@@ -1,0 +1,43 @@
+.Paganation {
+  margin-top: 2rem;
+}
+
+.Paganation *::selection {
+  background-color: transparent;
+}
+
+.PagesList {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.PageNumber {
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.Active {
+  cursor: default;
+}
+
+.Active,
+.PagesList > li:hover {
+  background-color: white;
+  color: #cb3066;
+}

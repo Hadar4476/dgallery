@@ -1,0 +1,13 @@
+.Footer {
+  font-family: 'Carter One', cursive;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+  transition-duration: 200ms;
+}
+
+.Footer > p::selection {
+  color: white;
+  background-color: #cb3066;
+}

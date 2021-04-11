@@ -1,0 +1,132 @@
+.UserMenuWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.UserMenu {
+  position: absolute;
+  width: 200px;
+  height: 0%;
+  visibility: hidden;
+  background-color: #fff;
+  right: 0;
+  float: right;
+  margin: 0.1rem 0.1rem 0 0;
+  z-index: 1;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+  animation-fill-mode: forwards;
+  animation-name: display;
+  animation-duration: 0.1s;
+}
+
+.UserMenu *::selection {
+  color: white;
+  background-color: #cb3066;
+}
+
+@keyframes display {
+  0% {
+    height: 0%;
+    visibility: hidden;
+  }
+  100% {
+    height: 280px;
+    visibility: visible;
+  }
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid silver;
+}
+
+.Top {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.Top > h5 {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.UserIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 100%;
+  transition-duration: 200ms;
+}
+
+.Bottom {
+  text-align: center;
+}
+.Bottom > p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.Body,
+.Footer {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.Body > div,
+.Footer > div {
+  display: flex;
+  padding: 0.5rem 0;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.Body i,
+.Footer i {
+  font-size: 1.5rem;
+  color: #586069;
+  transition-duration: 200ms;
+}
+.Body button,
+.Footer button {
+  color: #586069;
+  font-weight: 600;
+  transition-duration: 200ms;
+  text-decoration: none;
+  text-align: left;
+  border: none;
+  outline: none;
+}
+
+.Body > div:hover > i,
+.Body > div:hover > button,
+.Footer > div:hover > i,
+.Footer > div:hover > button {
+  color: #24292e;
+}
+
+.Body {
+  border-bottom: 1px solid silver;
+}
+
+.Footer > div {
+  margin-top: 10px;
+  width: 100%;
+}
