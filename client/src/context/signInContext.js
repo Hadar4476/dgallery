@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { enableBodyScroll } from 'body-scroll-lock';
-
+import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
 import axios from '../axios-users';
+
+import $ from 'jquery';
 
 const tokenKey = 'token';
 
@@ -47,10 +48,16 @@ export default (props) => {
   const [errorState, setErrorState] = useState(null);
 
   const onDisplaySignInModal = () => {
+    $(window).scrollTop(0);
+    const windowWidth = $(window).width();
+    if (windowWidth >= 500) {
+      disableBodyScroll(document.getElementsByTagName('body')[0]);
+    }
     setDisplaySignInModalState(true);
   };
 
   const onHideSignInModal = () => {
+    $(window).scrollTop(0);
     enableBodyScroll(document.getElementsByTagName('body')[0]);
     setErrorState(null);
     setDisplaySignInModalState(false);

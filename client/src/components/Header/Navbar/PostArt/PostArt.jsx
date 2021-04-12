@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
 import { useLocation } from 'react-router-dom';
 
+import $ from 'jquery';
+
 import * as actions from '../../../../store/actions';
 
 import classes from './PostArt.module.css';
@@ -27,12 +29,16 @@ const PostArt = (props) => {
   }, [pathname]);
 
   const onDisplayPostArtModalHandler = () => {
-    disableBodyScroll(document.getElementsByTagName('body')[0]);
+    const windowWidth = $(window).width();
+    if (windowWidth >= 500) {
+      disableBodyScroll(document.getElementsByTagName('body')[0]);
+    }
     displayUserMenu();
     onDisplayPostArtModal();
   };
 
   const onHidePostArtModalHandler = () => {
+    $(window).scrollTop(0);
     enableBodyScroll(document.getElementsByTagName('body')[0]);
     onHidePostArtModal();
   };

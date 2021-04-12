@@ -1,9 +1,6 @@
 import React, { useContext } from 'react';
 import { SignUpContext } from '../../context/signUpContext';
 import { checkValidity } from '../../shared/utility';
-import { disableBodyScroll } from 'body-scroll-lock';
-
-import $ from 'jquery';
 
 import classes from './SignUp.module.css';
 
@@ -71,8 +68,6 @@ const SignUp = () => {
 
   let form = null;
   if (displaySignUpModal) {
-    $(window).scrollTop(0);
-    disableBodyScroll(document.getElementsByTagName('body')[0]);
     form = (
       <React.Fragment>
         <div

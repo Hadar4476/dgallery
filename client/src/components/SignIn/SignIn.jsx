@@ -1,9 +1,6 @@
 import React, { useContext } from 'react';
 import { SignInContext } from '../../context/signInContext';
 import { checkValidity } from '../../shared/utility';
-import { disableBodyScroll } from 'body-scroll-lock';
-
-import $ from 'jquery';
 
 import classes from './SignIn.module.css';
 
@@ -71,8 +68,6 @@ const SignIn = () => {
 
   let form = null;
   if (displaySignInModal) {
-    $(window).scrollTop(0);
-    disableBodyScroll(document.getElementsByTagName('body')[0]);
     form = (
       <React.Fragment>
         <div

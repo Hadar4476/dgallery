@@ -12,7 +12,7 @@
 }
 
 .PostModal {
-  position: absolute;
+  position: fixed;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -135,10 +135,10 @@
 
 .Confirm {
   position: relative;
-  margin-top: auto;
+  margin-top: 1rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   width: 95%;
   background-color: #cb3066;
   height: 5rem;

@@ -1,8 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { SignInContext } from './signInContext';
-import { enableBodyScroll } from 'body-scroll-lock';
-
+import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
 import axios from '../axios-users';
+
+import $ from 'jquery';
 
 export const SignUpContext = React.createContext({
   formModal: {},
@@ -52,10 +53,16 @@ export default (props) => {
   const { onDisplaySignInModal } = useContext(SignInContext);
 
   const onDisplaySignUpModal = () => {
+    $(window).scrollTop(0);
+    const windowWidth = $(window).width();
+    if (windowWidth >= 500) {
+      disableBodyScroll(document.getElementsByTagName('body')[0]);
+    }
     setDisplaySignUpModalState(true);
   };
 
   const onHideSignUpModal = () => {
+    $(window).scrollTop(0);
     enableBodyScroll(document.getElementsByTagName('body')[0]);
     setErrorState(null);
     setDisplaySignUpModalState(false);

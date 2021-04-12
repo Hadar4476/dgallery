@@ -12,7 +12,7 @@
 }
 
 .SignUp {
-  position: absolute;
+  position: fixed;
   margin: auto;
   display: flex;
   flex-direction: column;
