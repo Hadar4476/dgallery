@@ -27,7 +27,7 @@ const GalleryItem = (props) => {
     onDeletePost,
   } = props;
 
-  const galleryItemBoxClasses = [classes.Box, 'col-md-1'];
+  const galleryItemBoxClasses = [classes.Box, 'col-sm-1'];
 
   const iconClasses = ['bx bx-dots-horizontal-rounded', 'bx bx-x'];
 
