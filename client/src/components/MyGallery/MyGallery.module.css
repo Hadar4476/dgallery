@@ -1,5 +1,4 @@
 .MyGallery {
-  width: 100%;
   margin: 2rem auto;
 }
 
@@ -16,16 +15,7 @@
 }
 
 .Body {
-  padding: 0.5rem;
-  width: 100%;
-  height: 890px;
-  border-radius: 0.5rem;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-.Body::-webkit-scrollbar {
-  display: none;
+  min-height: 900px;
 }
 
 .MyGalleryItemsWrapper {

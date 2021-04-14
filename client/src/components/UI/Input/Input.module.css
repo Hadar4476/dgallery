@@ -65,6 +65,7 @@
   transition-duration: 200ms;
   border-radius: 0.5rem;
   cursor: pointer;
+  height: 100%;
 }
 .FileInput:hover {
   background-color: #c5c8cf;
@@ -84,7 +85,7 @@
 
 .FileInput > input {
   visibility: hidden;
-  height: 10rem;
+  height: 100%;
   width: 100%;
   outline: none;
   margin: 1rem 0;

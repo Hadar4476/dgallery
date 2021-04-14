@@ -122,8 +122,10 @@ const PostModal = (props) => {
       <React.Fragment>
         <div className={darkBoxClasses.join(' ')} onClick={hideModal}></div>
         <form className={classes.PostModal} encType='multipart/form-data'>
-          <i className='fas fa-times' onClick={hideModal}></i>
-          <h1>Create Post</h1>
+          <div className={classes.Header}>
+            <i className='fas fa-times' onClick={hideModal}></i>
+            <h1>Create Post</h1>
+          </div>
           <Error error={error} />
           <div className={classes.FormGroupsWrapper}>
             {formElementsArray.map((item) => (

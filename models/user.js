@@ -1,4 +1,3 @@
-const Joi = require('@hapi/joi');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 

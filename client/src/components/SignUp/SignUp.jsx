@@ -78,8 +78,10 @@ const SignUp = () => {
           className={signUpFormClasses.join(' ')}
           onSubmit={onSignUpFormSubmitHandler}
         >
-          <i className='fas fa-times' onClick={onHideSignUpModal}></i>
-          <h1>Create an account</h1>
+          <div className={classes.Header}>
+            <i className='fas fa-times' onClick={onHideSignUpModal}></i>
+            <h1>Create an account</h1>
+          </div>
           <Error error={error} />
           <div className={classes.FormGroupsWrapper}>
             {formElementsArray.map((item) => (

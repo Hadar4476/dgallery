@@ -36,9 +36,9 @@
 }
 
 .MyGalleryItem {
-  width: 100%;
+  width: 95%;
   background-color: white;
-  margin: 1rem 0;
+  margin: 1rem auto;
   display: flex;
   flex-direction: column;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),

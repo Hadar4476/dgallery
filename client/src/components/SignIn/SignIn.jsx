@@ -78,8 +78,10 @@ const SignIn = () => {
           className={signInFormClasses.join(' ')}
           onSubmit={onSignInFormSubmitHandler}
         >
-          <i className='fas fa-times' onClick={onHideSignInModal}></i>
-          <h1>Welcome back</h1>
+          <div className={classes.Header}>
+            <i className='fas fa-times' onClick={onHideSignInModal}></i>
+            <h1>Welcome back</h1>
+          </div>
           <Error error={error} />
           <div className={classes.FormGroupsWrapper}>
             {formElementsArray.map((item) => (

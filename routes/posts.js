@@ -5,7 +5,6 @@ const auth = require('../middleware/auth');
 const router = express.Router();
 
 const multer = require('multer');
-const fs = require('fs');
 const AWS = require('aws-sdk');
 
 router.get('/search/:post', auth, async (req, res) => {
