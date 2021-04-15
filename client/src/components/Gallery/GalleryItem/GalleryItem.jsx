@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { awsS3URL } from '../../../axios-users';
+import { awsS3URL } from '../../../myaxios';
 
 import * as actions from '../../../store/actions';
 

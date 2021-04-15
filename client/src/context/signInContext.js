@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
-import axios from '../axios-users';
+import axios from '../myaxios';
 
 import $ from 'jquery';
 

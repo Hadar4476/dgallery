@@ -1,5 +1,5 @@
 import { put, call } from 'redux-saga/effects';
-import axios from '../../axios-users';
+import axios from '../../myaxios';
 import jwtDecode from 'jwt-decode';
 import { enableBodyScroll } from 'body-scroll-lock';
 
