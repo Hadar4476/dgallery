@@ -19,7 +19,7 @@ const initialState = {
       labelHTML: 'Upload',
       elementConfig: {
         type: 'file',
-        accept: 'image/jpg/image/png',
+        accept: 'image/jpg/image/png/image/jpeg',
       },
       value: '',
       valid: false,

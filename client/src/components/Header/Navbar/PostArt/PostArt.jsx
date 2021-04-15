@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
 import { useLocation } from 'react-router-dom';
@@ -22,11 +22,6 @@ const PostArt = (props) => {
   const { pathname } = useLocation();
 
   const iconClasses = ['fas fa-plus'];
-
-  useEffect(() => {
-    if (pathname === '/my-gallery') {
-    }
-  }, [pathname]);
 
   const onDisplayPostArtModalHandler = () => {
     const windowWidth = $(window).width();

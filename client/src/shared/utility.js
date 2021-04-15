@@ -47,7 +47,9 @@ export const checkValidity = (value, controlName) => {
     case 'image':
       isValid =
         trimValue.length &&
-        (trimValue.endsWith('.jpg') || trimValue.endsWith('.png'));
+        (trimValue.endsWith('.jpg') ||
+          trimValue.endsWith('.png') ||
+          trimValue.endsWith('.jpeg'));
       break;
     case 'caption':
       isValid = trimValue.length > 0;
