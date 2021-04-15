@@ -1,5 +1,6 @@
 .Error {
   position: absolute;
+  text-align: center;
   top: 4.5rem;
   right: 0;
   left: 0;

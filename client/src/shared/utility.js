@@ -32,7 +32,7 @@ export const checkPostArtValidity = (form) => {
 
 export const checkValidity = (value, controlName) => {
   let isValid = false;
-  let trimValue = value.trim();
+  let trimValue = value.trim().toLowerCase();
   switch (controlName) {
     case 'email':
     case 'password':

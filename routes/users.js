@@ -27,18 +27,18 @@ router.patch('/changeEmail', auth, async (req, res) => {
   const { changeEmail } = req.body;
   const { _id } = req.user;
   const { email } = await User.findById(_id).select('-password');
-  if (email === changeEmail) {
+  if (email.toLowerCase() === changeEmail.toLowerCase()) {
     return res.status(400).send('Please update your email to a new one');
   }
   const isSameEmail = await User.findOne({
-    email: changeEmail,
+    email: { $regex: new RegExp('^' + changeEmail.toLowerCase(), 'i') },
   }).select('-password');
   if (isSameEmail) {
     return res.status(400).send('This email is already taken');
   }
   const user = await User.findByIdAndUpdate(
     { _id: _id },
-    { email: changeEmail }
+    { email: { $regex: new RegExp('^' + changeEmail.toLowerCase(), 'i') } }
   );
   await user.save();
   user.email = changeEmail;
@@ -54,11 +54,15 @@ router.get('/me', auth, async (req, res) => {
 
 router.post('/', async (req, res) => {
   const { email, username } = req.body;
-  const isUsernameUnique = await User.findOne({ username: username });
+  const isUsernameUnique = await User.findOne({
+    username: { $regex: new RegExp('^' + username.toLowerCase(), 'i') },
+  });
   if (isUsernameUnique) {
     return res.status(400).send('Username is already in use');
   }
-  const isEmailUnique = await User.findOne({ email: email });
+  const isEmailUnique = await User.findOne({
+    email: { $regex: new RegExp('^' + email.toLowerCase(), 'i') },
+  });
   if (isEmailUnique) {
     return res.status(400).send('Email is already in use');
   }
