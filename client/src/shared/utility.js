@@ -41,7 +41,6 @@ export const checkValidity = (value, controlName) => {
       isValid = trimValue.length > 5;
       break;
     case 'username':
-    case 'changeUsername':
       isValid = /[a-z]+/gi.test(trimValue) && trimValue.length > 2;
       break;
     case 'image':
