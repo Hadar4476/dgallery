@@ -9,9 +9,8 @@ import classes from './MyGallery.module.css';
 import MyGalleryItem from './MyGalleryItem/MyGalleryItem';
 
 const MyGallery = (props) => {
-  const { user } = props;
-
   const {
+    user,
     myGallery,
     onInitMyGallery,
     error,

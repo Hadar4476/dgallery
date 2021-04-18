@@ -28,9 +28,6 @@ const App = (props) => {
   const { user, getAuthenticatedUserHandler } = props;
 
   const { pathname } = useLocation();
-  const silverBGColor = '#e0e0e0';
-  const whiteBGColor = 'white';
-  const blueColor = '#16bffd';
 
   const userToken = localStorage.getItem(tokenKey);
   useEffect(() => {
@@ -40,18 +37,22 @@ const App = (props) => {
   }, [userToken, getAuthenticatedUserHandler, isTokenValid]);
 
   useEffect(() => {
+    const bodyElement = document.body;
+    const navElement = $('nav');
+    const footerElement = $('footer');
+    let bodyBackground = '';
+    let navElementStyle = 'background-color:transparent;border:none';
+    let footerElementStyle = 'color:white';
+
     if (pathname === '/my-gallery') {
-      document.body.style.background = silverBGColor;
-      $('nav').attr(
-        'style',
-        `background-color:${whiteBGColor};border-bottom: 2px solid silver`
-      );
-      $('footer').attr('style', `color:${blueColor}`);
-    } else {
-      document.body.style.background = null;
-      $('nav').attr('style', 'background-color:transparent;border:none');
-      $('footer').attr('style', 'color:white');
+      bodyBackground = '#e0e0e0';
+      navElementStyle =
+        'background-color:white;border-bottom: 2px solid silver';
+      footerElementStyle = 'color:#16bffd';
     }
+    bodyElement.style.background = bodyBackground;
+    navElement.attr('style', navElementStyle);
+    footerElement.attr('style', footerElementStyle);
   }, [pathname]);
 
   let welcomePage = <Route exact path='/' component={Homepage} />;
