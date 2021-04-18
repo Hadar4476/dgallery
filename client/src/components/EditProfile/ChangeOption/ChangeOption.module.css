@@ -124,7 +124,7 @@
   color: #586069;
 }
 .ChangeOption > button {
-  border: none;
+  background-color: transparent;
   font-weight: 600;
   margin: auto 0;
   color: #586069;

@@ -106,6 +106,7 @@
 }
 .Body button,
 .Footer button {
+  background-color: transparent;
   color: #586069;
   font-weight: 600;
   transition-duration: 200ms;
