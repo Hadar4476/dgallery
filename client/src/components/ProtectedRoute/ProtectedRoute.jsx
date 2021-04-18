@@ -12,7 +12,7 @@ const ProtectedRoute = ({
     <Route
       {...rest}
       render={(props) => {
-        if (!user)
+        if (!user.username)
           return (
             <Redirect
               to={{
