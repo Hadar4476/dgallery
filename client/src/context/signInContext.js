@@ -19,7 +19,7 @@ export const SignInContext = React.createContext({
   setIsTokenValid: () => {},
 });
 
-export default (props) => {
+const SignInContextProvider = (props) => {
   const [formModalState, setFormModalState] = useState({
     email: {
       elementType: 'input',
@@ -102,3 +102,5 @@ export default (props) => {
     </SignInContext.Provider>
   );
 };
+
+export default SignInContextProvider;
