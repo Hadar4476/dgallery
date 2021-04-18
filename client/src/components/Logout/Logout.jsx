@@ -6,9 +6,8 @@ import { useHistory } from 'react-router-dom';
 import * as actions from '../../store/actions';
 
 const Logout = (props) => {
-  const { onUserLogOutHandler } = props;
+  const { onUserLogOutHandler, resetPostData } = props;
   const { onHideSignInModal, setIsTokenValid } = useContext(SignInContext);
-  const { resetPostData } = props;
   const history = useHistory();
 
   useEffect(() => {
