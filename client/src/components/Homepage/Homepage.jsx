@@ -9,7 +9,9 @@ import SignIn from '../SignIn/SignIn';
 
 const Homepage = () => {
   const { onDisplaySignUpModal } = useContext(SignUpContext);
-  const { onDisplaySignInModal } = useContext(SignInContext);
+  const { onDisplaySignInModal, onSignInFormSubmit } = useContext(
+    SignInContext
+  );
 
   const onNavToSignUpHanlder = () => {
     onDisplaySignUpModal();
@@ -17,6 +19,14 @@ const Homepage = () => {
 
   const onNavToSignInHanlder = () => {
     onDisplaySignInModal();
+  };
+
+  const onSignInAsGuestHandler = () => {
+    const guest = {
+      email: 'guest@gmail.com',
+      password: '123456',
+    };
+    onSignInFormSubmit(guest);
   };
 
   return (
@@ -35,10 +45,17 @@ const Homepage = () => {
       </div>
 
       <div className={classes.Navigation}>
-        <button onClick={onNavToSignUpHanlder}>SIGN UP NOW</button>
-        <p className={classes.Link} onClick={onNavToSignInHanlder}>
-          I already have an account
-        </p>
+        <div className={classes.Guest}>
+          <button onClick={onSignInAsGuestHandler}>Try as guest</button>
+        </div>
+        <div className={classes.SignUp}>
+          <button onClick={onNavToSignUpHanlder}>Sign up now</button>
+        </div>
+        <div className={classes.SignIn}>
+          <p className={classes.Link} onClick={onNavToSignInHanlder}>
+            I already have an account
+          </p>
+        </div>
       </div>
       <SignUp />
       <SignIn />

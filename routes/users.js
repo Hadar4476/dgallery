@@ -7,7 +7,9 @@ const router = express.Router();
 
 router.patch('/changePassword', auth, async (req, res) => {
   const { changePassword } = req.body;
-  const { _id } = req.user;
+  const { _id, username } = req.user;
+  if (username === 'Guest')
+    return res.status(404).send("This user information can't be changed");
   const { password } = await User.findOne({ _id: _id });
   const isSamePassword = await bcrypt.compare(changePassword, password);
   if (isSamePassword) {
@@ -25,7 +27,9 @@ router.patch('/changePassword', auth, async (req, res) => {
 
 router.patch('/changeEmail', auth, async (req, res) => {
   const { changeEmail } = req.body;
-  const { _id } = req.user;
+  const { _id, username } = req.user;
+  if (username === 'Guest')
+    return res.status(404).send("This user information can't be changed");
   const { email } = await User.findById(_id).select('-password');
   if (email.toLowerCase() === changeEmail.toLowerCase()) {
     return res.status(400).send('Please update your email to a new one');

@@ -35,27 +35,46 @@
   flex-direction: column;
 }
 
-.Navigation > button {
+.Guest {
+  width: 100%;
+}
+
+.SignUp {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.Guest > button,
+.SignUp > button {
   width: 97%;
   border: none;
   height: 4rem;
   font-size: 1.5rem;
   border-radius: 0.15rem;
-  border: 2px solid black;
-  background-color: #cb3066;
   color: #dedfe0;
   transition-duration: 200ms;
   font-family: 'Carter One', cursive;
   cursor: pointer;
+  outline: none;
 }
 
-.Navigation > button:hover {
-  background-color: #2196f3;
+.Guest > button {
+  background-color: #24292e;
+}
+
+.SignUp > button {
+  background-color: #cb3066;
+  border: 2px solid black;
+}
+
+.Guest > button:hover {
+  background-color: black;
   color: white;
 }
 
-.Navigation > button:focus {
-  outline: none;
+.SignUp > button:hover {
+  background-color: #2196f3;
+  color: white;
 }
 
 .Link {
