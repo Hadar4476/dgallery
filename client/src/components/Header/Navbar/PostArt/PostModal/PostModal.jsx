@@ -43,9 +43,7 @@ const PostModal = (props) => {
   const inputChangedHandler = ({ target }, controlName) => {
     const updatedFormControls = { ...formModal };
     if (controlName === 'image') {
-      const form = new FormData();
       const file = target.files[0];
-      form.append('imageFile', file);
 
       if (file) {
         const source = URL.createObjectURL(file);
