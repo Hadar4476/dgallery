@@ -37,12 +37,12 @@ router.patch('/changeEmail', auth, async (req, res) => {
   const isSameEmail = await User.findOne({
     email: { $regex: new RegExp('^' + changeEmail.toLowerCase(), 'i') },
   }).select('-password');
-  if (isSameEmail) {
+  if (isSameEmail && isSameEmail.email) {
     return res.status(400).send('This email is already taken');
   }
   const user = await User.findByIdAndUpdate(
     { _id: _id },
-    { email: { $regex: new RegExp('^' + changeEmail.toLowerCase(), 'i') } }
+    { email: changeEmail.toLowerCase() }
   );
   await user.save();
   user.email = changeEmail;
