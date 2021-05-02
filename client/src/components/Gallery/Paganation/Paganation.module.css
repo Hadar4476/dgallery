@@ -1,9 +1,22 @@
 .Paganation {
   margin-top: 2rem;
+  display: flex;
 }
 
 .Paganation *::selection {
   background-color: transparent;
+}
+
+.Previous > button,
+.Next > button {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  transition-duration: 200ms;
 }
 
 .PagesList {
@@ -15,18 +28,20 @@
   margin: 0 auto;
 }
 
+.Previous,
+.Next,
 .PageNumber {
   margin: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   border-radius: 100%;
   background-color: transparent;
   border: 2px solid white;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   transition-duration: 200ms;
   cursor: pointer;
@@ -40,4 +55,19 @@
 .PagesList > li:hover {
   background-color: white;
   color: #cb3066;
+}
+
+.Previous:hover,
+.Next:hover {
+  background-color: white;
+}
+
+.Previous:hover > button,
+.Next:hover > button {
+  color: #cb3066;
+}
+
+.Previous:hover > button:disabled,
+.Next:hover > button:disabled {
+  color: gray;
 }
